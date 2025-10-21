@@ -78,10 +78,14 @@ public class Main {
 
         emp1.logHours(40);
 
+        emp2.punchIn(8);
+        emp2.punchOut();
+
         System.out.println("after");
 
         for(Employee e : employees){
             System.out.println(e);
         }
+
     }
 }
