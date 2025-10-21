@@ -42,6 +42,15 @@ public class Room {
 
     }
 
+    public void checkIn(){
+        return;
+
+    }
+
+    public void checkOut(){
+
+    }
+
     @Override
     public String toString() {
         return "Room{" +
