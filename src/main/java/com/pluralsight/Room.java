@@ -44,8 +44,8 @@ public class Room {
 
     public void checkIn(){
         if (!isAvailable()){
-            isDirty=true;
-            isOccupied=true;
+            this.isDirty=true;
+            this.isOccupied=true;
             System.out.println("Guest checked in.");
         }
 
@@ -53,8 +53,8 @@ public class Room {
 
     public void checkOut(){
         if (isAvailable()){
-            isDirty=true;
-            isOccupied=false;
+            this.isDirty=true;
+            this.isOccupied=false;
             System.out.println("Guest checked out.");
         }
 
@@ -62,7 +62,7 @@ public class Room {
 
     public void cleanRoom(){
         if (!isOccupied){
-            isDirty=false;
+            this.isDirty=false;
         }
 
     }

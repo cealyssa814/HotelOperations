@@ -23,6 +23,14 @@ public class Main {
 
         }
 
+        r101.checkIn();
+        r102.checkIn();
+
+        for(Room r : rooms){
+            System.out.println(r);
+
+        }
+
 
         ArrayList<Reservation> reservations = new ArrayList<>();
 
@@ -45,7 +53,7 @@ public class Main {
 
         ArrayList<Employee> employees = new ArrayList<>();
 
-        Employee emp1 = new Employee(1, "Matt", "IT", 10, 35);
+        Employee emp1 = new Employee(1, "Matt", "IT", 10, 0);
         Employee emp2 = new Employee(1, "Fred", "Exec", 10, 45);
         Employee emp3 = new Employee(1, "Sarah", "HR", 10, 40);
         Employee emp4 = new Employee(1, "Sam", "HR", 20, 41);
@@ -59,5 +67,21 @@ public class Main {
             System.out.println(e);
         }
 
+        emp1.punchIn(8);
+        emp1.punchOut( 12);
+
+        emp1.punchIn(13);
+        emp1.punchOut(17);
+
+        emp1.punchTimeCard(8, 12);
+        emp1.punchTimeCard(13,17);
+
+        emp1.logHours(40);
+
+        System.out.println("after");
+
+        for(Employee e : employees){
+            System.out.println(e);
+        }
     }
 }

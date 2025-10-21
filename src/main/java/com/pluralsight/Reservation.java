@@ -6,7 +6,10 @@ public class Reservation {
     private int numberOfNights;
     private boolean isWeekend;
 
-    public Reservation(String king, int i, boolean b) {
+    public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
+        this.roomType = roomType;
+        this.numberOfNights = numberOfNights;
+        this.isWeekend = isWeekend;
     }
 
     public String getRoomType() {
@@ -32,8 +35,6 @@ public class Reservation {
     public void setIsWeekend(boolean weekend) {
         isWeekend = weekend;
     }
-
-
 
     public double getPrice(){
 

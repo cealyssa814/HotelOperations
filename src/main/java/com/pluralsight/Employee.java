@@ -8,6 +8,7 @@ public class Employee {
     private String department;
     private double payRate;
     private float hoursWorked;
+    private double punchInTime=0;
 
     public Employee(int employeeId, String name, String department, double payRate, float hoursWorked) {
         this.employeeId = employeeId;
@@ -50,13 +51,24 @@ public class Employee {
     }
 
     public void punchIn(double time){
-
+        this.punchInTime = time;
     }
 
     public void punchOut(double time){
+        //double elapsedTime = time - this.punchInTime;
+        //this.hoursWorked += (float) elapsedTime;
+
+        this.hoursWorked += (float) (time - this.punchInTime);
 
     }
 
+    public void punchTimeCard(double checkInTime, double checkOutTime){
+        this.hoursWorked += (float) (checkOutTime - checkInTime);
+    }
+
+    public void logHours(float hours){
+        this.hoursWorked += hours;
+    }
 
     @Override
     public String toString() {
