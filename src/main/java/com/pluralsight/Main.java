@@ -23,14 +23,23 @@ public class Main {
 
         }
 
+        System.out.println("Rooms have 2 checked out:");
+
+
         r101.checkIn();
         r102.checkIn();
 
         for(Room r : rooms){
             System.out.println(r);
-
         }
 
+        System.out.println("One room checked out");
+
+        r102.checkOut();
+
+        for(Room r : rooms){
+            System.out.println(r);
+        }
 
         ArrayList<Reservation> reservations = new ArrayList<>();
 
@@ -49,6 +58,7 @@ public class Main {
             System.out.println(r);
         }
 
+
         //---------------------
 
         ArrayList<Employee> employees = new ArrayList<>();
@@ -66,6 +76,8 @@ public class Main {
         for(Employee e : employees){
             System.out.println(e);
         }
+
+        //---
 
         emp1.punchIn(8);
         emp1.punchOut( 12);
@@ -86,6 +98,24 @@ public class Main {
         for(Employee e : employees){
             System.out.println(e);
         }
+
+        System.out.println("Hotels:");
+        Hotel h1 = new Hotel("Days Inn", 6, 20);
+        Hotel h2 = new Hotel("Holiday Inn", 10, 40);
+
+        System.out.println(h1);
+        System.out.println(h2);
+
+        System.out.println("Book a room:");
+        System.out.println("Book 3 suites");
+        System.out.println(h1.bookRoom(3, true));
+
+        System.out.println(h1);
+
+        System.out.println("Book 4 more");
+        System.out.println( h1.bookRoom(4, false));
+
+        System.out.println(h1);
 
     }
 }

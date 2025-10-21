@@ -50,7 +50,6 @@ public class Reservation {
         }
         else {
             return 0;
-            //todo: this should never really happen maybe throw an exception instead?
         }
 
         if(isWeekend){
