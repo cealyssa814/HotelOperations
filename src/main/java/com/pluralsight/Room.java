@@ -43,11 +43,27 @@ public class Room {
     }
 
     public void checkIn(){
-        return;
+        if (!isAvailable()){
+            isDirty=true;
+            isOccupied=true;
+            System.out.println("Guest checked in.");
+        }
 
     }
 
     public void checkOut(){
+        if (isAvailable()){
+            isDirty=true;
+            isOccupied=false;
+            System.out.println("Guest checked out.");
+        }
+
+    }
+
+    public void cleanRoom(){
+        if (!isOccupied){
+            isDirty=false;
+        }
 
     }
 

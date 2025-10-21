@@ -23,5 +23,41 @@ public class Main {
 
         }
 
+
+        ArrayList<Reservation> reservations = new ArrayList<>();
+
+        Reservation res1 = new Reservation("king", 2, false);
+        Reservation res2 = new Reservation("double", 1, false);
+        Reservation res3 = new Reservation("king", 1, false);
+        Reservation res4 = new Reservation("king", 1, true);
+
+        reservations.add(res1);
+        reservations.add(res2);
+        reservations.add(res3);
+        reservations.add(res4);
+
+
+        for(Reservation r : reservations){
+            System.out.println(r);
+        }
+
+        //---------------------
+
+        ArrayList<Employee> employees = new ArrayList<>();
+
+        Employee emp1 = new Employee(1, "Matt", "IT", 10, 35);
+        Employee emp2 = new Employee(1, "Fred", "Exec", 10, 45);
+        Employee emp3 = new Employee(1, "Sarah", "HR", 10, 40);
+        Employee emp4 = new Employee(1, "Sam", "HR", 20, 41);
+
+        employees.add(emp1);
+        employees.add(emp2);
+        employees.add(emp3);
+        employees.add(emp4);
+
+        for(Employee e : employees){
+            System.out.println(e);
+        }
+
     }
 }
